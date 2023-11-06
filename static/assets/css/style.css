@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap');
+
+
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  max-width: 100vw;
+  display: flex;
+
+  background-color: gray;
+}
+
+.body-bg-image {
+  position: absolute;
+  z-index: -100;
+
+  width: 100%;
+  height: 100%;
+
+  background-size: cover;
+  background-position: center;
+
+  opacity: 0%;
+  transition: opacity 1.2s;
+}
+
+.first {
+  opacity: 100%;
+}
+
+header {
+  width: 2.3in;
+  flex-grow: 0;
+  flex-shrink: 0;
+  background-image: linear-gradient(to bottom, rgba(50, 50, 50, 0.8), rgba(0, 0, 0, 0.65));
+  border-right: solid 0.5rem rgb(0, 132, 209);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  padding: 1.5rem;
+  color: white;
+  
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+#content-area {
+  flex-grow: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: auto;
+}
+
+main {
+  flex-grow: 1;
+  padding: 4rem;
+}
+
+footer {
+  background-color: rgba(0, 0, 0, 0.65);
+  border-top: solid 1px rgb(80, 80, 80);
+  padding: 1rem;
+
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+@media (max-width: 860px) {
+  main {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+    height: unset;
+  }
+
+  .body-bg-image {
+    position: fixed;
+  }
+
+  #content-area {
+    overflow: visible;
+  }
+
+  header {
+    width: unset;
+    border-right: none;
+    border-bottom: solid 0.5rem rgb(0, 132, 209);
+  }
+}
+
+nav {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), 25%, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+  padding: 0.5rem;
+}
+
+nav ul {
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 0.25rem;
+  margin-bottom: 0.5rem;
+
+  list-style: none;
+}
+
+nav li:hover {
+  background-color: rgba(70, 70, 70, 0.3);
+}
+
+nav li:last-child {
+  margin-bottom: 0;
+}
+
+nav a {
+  display: block;
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: wheat;
+}
+
+card {
+  display: block;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+
+  background-image: linear-gradient(to bottom, rgba(70, 70, 70, 0.8), rgba(0, 0, 0, 0.65));
+  border-top: solid 0.25rem rgb(0, 132, 209);
+
+  color: white;
+
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+card::after {
+  display: block;
+  position: absolute;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
+
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 1rem;
+  content: '';
+}
+
+card-header {
+  display: block;
+
+  font-weight: 800;
+  font-size: 1.25rem;
+  border-bottom: solid 1px gray;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
+
+  flex-grow: 1;
+}
+
+item-card {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-left: solid 0.25rem rgb(100, 100, 100);
+  outline: solid 1px rgb(100, 100, 100);
+}
+
+item-card a {
+  color: white;
+  text-decoration: none;
+}
+
+item-card card-header {
+  font-size: 1rem;
+}
+
+.item-card-thumbnail {
+  width: 1.1in;
+  height: 1.1in;
+}
+
+code-window {
+  background-image: linear-gradient(to bottom, rgb(60, 60, 60), rgb(40, 40, 40));
+  border: solid 1px rgb(80, 80, 80);
+  outline: solid 1px rgb(40, 40, 40);
+  border-radius: 0.75rem;
+  padding: 1rem;
+
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+
+  display: block;
+
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+code-window-close {
+  display: block;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: .375rem;
+  background-color: #FC5753;
+  border: solid 1px #DF4744;
+  box-sizing: border-box;
+}
+
+code-window-minimize {
+  display: block;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: .375rem;
+  background-color: #FDBC40;
+  border: solid 1px #DE9F34;
+  box-sizing: border-box;
+}
+
+code-window-fullscreen {
+  display: block;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 0.375rem;
+  background-color: #36C84B;
+  border: solid 1px #27AA35;
+  box-sizing: border-box;
+}
+
+.glowing-text {
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+}
