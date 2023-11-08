@@ -1,0 +1,29 @@
+<header>
+
+  <code-window>
+    <div style="display: flex; gap: 0.4375rem; padding-bottom: .5rem;">
+      <code-window-close></code-window-close>
+      <code-window-minimize></code-window-minimize>
+      <code-window-fullscreen></code-window-fullscreen>
+    </div>
+    <div style="display: flex; justify-content: center; flex-direction: row;">
+      <a href="/" style="text-decoration: none;">
+        <pre
+        id="title"
+        {{ if .subtitle }}
+        data-subtitle="{{ .subtitle }}"
+        {{ end }}>|</pre>
+      </a>
+    </div>
+  </code-window>
+
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis placeat corporis magni maiores enim. Amet nemo autem iusto quae asperiores!</p>
+  <hr>
+  <nav>
+    <ul>
+      <li><a href="/threads">Threads</a></li>
+      <li><a href="/posts">Posts</a></li>
+      <li><a href="/articles">Articles</a></li>
+    </ul>
+  </nav>
+</header>
