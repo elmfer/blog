@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>ELMFER Blog</title>
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+  </head>
+  <body>
+    {{ partial "header.html" (dict "subtitle" "<Posts/>") }}
+
+    <div id="content-area">
+      <div style="display: flex; flex-direction: row; justify-content: center; flex-grow: 1;">
+        <main>
+          <card>
+            <card-header>Posts</card-header>
+  
+            {{ $posts := where .Site.RegularPages "Type" "posts"}}
+            {{ range $posts }}
+              {{ partial "post-item.html" . }}
+            {{ end }}
+          </card>
+        </main>
+      </div>
+
+      {{ partial "footer.html" }}
+    </div>
+
+    {{ partial "include-scripts.html" }}
+  </body>
+</html>

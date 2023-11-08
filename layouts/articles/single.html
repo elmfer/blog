@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>ELMFER Blog</title>
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+  </head>
+  <body>
+    {{ partial "header.html" (dict "subtitle" "<Articles/>") }}
+
+    <div id="content-area">
+      <div style="display: flex; flex-direction: row; justify-content: center; flex-grow: 1;">
+        <main>
+          <card>
+            <card-header>Articles > {{ .Title }}</card-header>
+            <div>Created On: {{ .Date.Format "Monday Jan 2, 2006" }}</div>
+          </card>
+
+          <card class="content">
+            {{ .Content }}
+          </card>
+        </main>
+      </div>
+
+      {{ partial "footer.html" }}
+    </div>
+
+    {{ partial "include-scripts.html" }}
+  </body>
+</html>
