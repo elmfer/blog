@@ -19,10 +19,12 @@ function loadBackgroundImage() {
   loader.load();
 }
 
-async function animateTitle() {
-  let title = "<ELMFER Dev Blog/>";
+async function animateTitle(subtitle) {
+  let timeFactor = subtitle ? 0.5 : 1;
+  let title = "<ELMFER Dev Blog/>" + (subtitle ? "\n" + subtitle : "");
+  const pageKey = subtitle ? `[\"${subtitle}\"]` : "[\"home\"]";
 
-  if(sessionStorage.getItem('titleHasAnimated')) {
+  if(sessionStorage.getItem('titleHasAnimated' + pageKey)) {
     $('#title').text(title);
     $('#title').addClass('glowing-text');
     return;
@@ -34,23 +36,28 @@ async function animateTitle() {
 
   while(title.length > 0) {
     const letter = title[0];
+
+    if(letter === ' ') await sleep(timeFactor * (200 + randInt(100)));
+    else if(letter === '\n') {
+      await sleep(timeFactor * (400 + randInt(200)));
+      timeFactor = 1;
+    }
+    else await sleep(timeFactor * (70 + randInt(80)));
+
     title = title.substring(1);
     titleToDisplay += letter;
     $('#title').text(titleToDisplay + '|');
-
-    if(letter === ' ') await sleep(100 + randInt(100));
-    else await sleep(70 + randInt(80));
   }
 
   await sleep(300);
   $('#title').text(titleToDisplay);
   $('#title').addClass('glowing-text');
-  sessionStorage.setItem('titleHasAnimated', true);
+  sessionStorage.setItem('titleHasAnimated' + pageKey, true);
 }
 
 function init() {
   loadBackgroundImage();
-  animateTitle();
+  animateTitle($('#title').data('subtitle'));
 }
 
 init();
