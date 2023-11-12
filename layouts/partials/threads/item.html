@@ -1,5 +1,9 @@
 <item-card>
-  <img class="item-card-thumbnail" src="https://mtek3d.com/wp-content/uploads/2018/01/image-placeholder-500x500.jpg">
+  {{ if .Param "thumbnail" }}
+  <div class="item-card-thumbnail" style="background-image: url({{ .Param "thumbnail" }});"></div>
+  {{ else }}
+  <div class="item-card-thumbnail" style="background-image: url(assets/images/code_icon_256.png);"></div>
+  {{ end }}
   <div style="flex-grow: 1;">
     <a href="{{ .Permalink }}"><card-header>{{ .Title }}</card-header></a>
     <span>{{ .Summary }}</span>
