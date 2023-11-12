@@ -2,6 +2,7 @@
 title: "Teensy"
 date: 2023-11-06T23:46:39-06:00
 draft: true
+thumbnail: "https://elmfer.com/teensy_stopwatch/teensy_board.png"
 
 cascade:
   _build:
