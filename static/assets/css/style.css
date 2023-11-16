@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap');
 
-
 * {
   font-family: 'Open Sans', sans-serif;
 }
@@ -322,4 +321,11 @@ pre {
 
 .content a {
   color: rgb(0, 140, 255);
+}
+
+code {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 100;
+  padding: 0 !important;
+  background: none !important;
 }
