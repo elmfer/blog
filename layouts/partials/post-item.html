@@ -2,7 +2,7 @@
   {{ if .Param "thumbnail" }}
   <div class="item-card-thumbnail" style="background-image: url({{ .Param "thumbnail" }});"></div>
   {{ else }}
-  <div class="item-card-thumbnail" style="background-image: url(assets/images/code_icon_256.png);"></div>
+  <div class="item-card-thumbnail" style="background-image: url(/assets/images/code_icon_256.png);"></div>
   {{ end }}
   <div style="flex-grow: 1;">
     <a href="{{ .Permalink }}"><card-header>{{ .Title }}</card-header></a>
