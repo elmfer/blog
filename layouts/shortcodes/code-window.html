@@ -1,0 +1,12 @@
+<code-window>
+  {{ with .Get "traffic-lights"}}
+  <div style="display: flex; gap: 0.4375rem; padding-bottom: .5rem;">
+    <code-window-close></code-window-close>
+    <code-window-minimize></code-window-minimize>
+    <code-window-fullscreen></code-window-fullscreen>
+  </div>
+  {{ end }}
+  <div>
+    <pre><code {{ with .Get "language" }} class="language-{{ . }}" {{ end }} >{{ .Inner }}</code></pre>
+  </div>
+</code-window>
