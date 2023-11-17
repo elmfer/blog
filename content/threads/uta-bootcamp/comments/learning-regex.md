@@ -19,3 +19,8 @@ I went ahead and included a use case for using this regex as the introduction. T
 To note, I am using [RegExr](https://regexr.com/) to test the regex and to get detailed explanation for each regex component. This website gives a detailed overview on what each of the regex syntax does, so my tutorial is going to be mostly based upon that.
 
 I had to rewatch **Web Dev Simplified**'s [video](https://www.youtube.com/watch?v=rhzKDrUiJVk) because I did not understood what the `?:` inside of a group means. Turns out, you can do operations post-match on substrings (groups) of a match, but they are not going to be used since the regex's job is to just verify an IP address.
+
+Lasty, I created sections for each regex component with thier explanations. And it is complete!
+
+### Final Product
+[IPV4 Address Regex Explanation/Tutorial](https://gist.github.com/elmfer/107080ca2afaab85431efdcc07d13352)
