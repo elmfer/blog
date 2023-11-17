@@ -1,5 +1,5 @@
 ---
-title: "Creating a Tutorial - Assignment"
+title: "Creating a Regex Tutorial - Assignment"
 date: 2023-11-16T01:55:38-06:00
 tags: ["module 14", "tutorial", "assignment"]
 draft: true

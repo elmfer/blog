@@ -16,4 +16,6 @@ Glady after watching the video, I gained a much better understanding of the basi
 
 I went ahead and included a use case for using this regex as the introduction. Then, I will briefly explain how the pattern of an IP address is broken down so that its pieces can be futher explained.
 
-To note, I am using [RegExr](https://regexr.com/) to test the regex and to get detailed explanation for each regex component.
+To note, I am using [RegExr](https://regexr.com/) to test the regex and to get detailed explanation for each regex component. This website gives a detailed overview on what each of the regex syntax does, so my tutorial is going to be mostly based upon that.
+
+I had to rewatch **Web Dev Simplified**'s [video](https://www.youtube.com/watch?v=rhzKDrUiJVk) because I did not understood what the `?:` inside of a group means. Turns out, you can do operations post-match on substrings (groups) of a match, but they are not going to be used since the regex's job is to just verify an IP address.
