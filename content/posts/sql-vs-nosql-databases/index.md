@@ -26,3 +26,7 @@ Nevertheless though, my initial concerns of a NoSQL database turned out to be tr
 ![Coding](./images/coding.jpg)
 
 In conclusion, I can see MongoDB being used for storing simpler data structures where data fragmentation is not a big deal. Because they are easier to grasp and easy to setup, they are easy to implement and adapt into any application. In contrast, SQL databases are rigid and reliable for data integrity. They do require more planning ahead of time prior to developing an application, but it automatically disallows any operations that will result in data fragmentation (keeping your data consistent).
+
+> ### Credits
+> 
+> Stock photos are sourced from [pixabay.com](https://pixabay.com).
