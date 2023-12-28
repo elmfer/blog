@@ -3,6 +3,8 @@ title: "SQL vs NoSQL Databases - Why are NoSQL Databases are a thing?"
 date: 2023-11-24T00:46:14-06:00
 draft: false
 thumbnail: "/posts/sql-vs-nosql-databases/images/icon.jpg"
+category: "Web Programming"
+tags: ["backend", "nodejs", "databases" "json"]
 ---
 
 This is a tangent to my bootcamp journey. You can see more about it in this [thread](/threads/uta-bootcamp).
