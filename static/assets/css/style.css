@@ -60,7 +60,8 @@ header {
 }
 
 main {
-  max-width: 10in;
+  max-width: min(100%, 10in);
+  box-sizing: border-box;
 
   flex-grow: 1;
   padding: 4rem;
